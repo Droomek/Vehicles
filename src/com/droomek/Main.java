@@ -10,13 +10,13 @@ public class Main {
         Plane plane1 = new Plane ( "Boening","777" );
 
 
-        //vehicle1.start ();
-        //vehicle1.stop ();
+        vehicle1.start ();
+        vehicle1.stop ();
         //bike1.start ();
         //bike1.stop ();
         //car1.start ();
         //car1.stop ();
-        plane1.start ();
-        plane1.stop ();
+        //plane1.start ();
+        //plane1.stop ();
     }
 }
