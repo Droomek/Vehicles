@@ -47,19 +47,24 @@ public class Vehicle {
         }
     }
 
-    void vehicleSpeed(String[] vehicleSpeed) {
+    void vehicleSpeed(String[] vehicleSpeed) throws InterruptedException {
         boolean flag = true;
         int speed = 0;
         Scanner scanner = new Scanner ( System.in );
         System.out.println ( "Current speed " + vehicleSpeed[speed]+" km/h." );
         while (flag) {
-            System.out.println ( "Faster write \"+\" \n" +
-                    "Slower write \"-\" " );
+            System.out.println ( "Faster write \t \t : \"+\" \n" +
+                    "Slower or stop write : \"-\" " );
             String sign = scanner.nextLine ();
             switch (sign) {
                 case "+":
                     if (speed == 0 || speed < 5) {
                         speed++;
+                        for (int i=0; i< 10 ; i++){
+                            TimeUnit.MILLISECONDS.sleep ( 150 );
+                            System.out.print ("- ");
+                        }
+                        System.out.println ();
                         System.out.println ( "Current speed " + vehicleSpeed[speed] + "km/h." );
                     } else
                         System.out.println ( vehicleSpeed[speed] + "km/h is the highest speed." );
@@ -67,6 +72,11 @@ public class Vehicle {
                 case "-":
                     if (speed != 0) {
                         speed--;
+                        for (int i=0; i< 10 ; i++){
+                            TimeUnit.MILLISECONDS.sleep ( 150 );
+                            System.out.print ("- ");
+                        }
+                        System.out.println ();
                         System.out.println ( "Current speed " + vehicleSpeed[speed] + "km/h." );
                     } else {
                         System.out.println ( "Current speed " + vehicleSpeed[speed] + "km/h." );

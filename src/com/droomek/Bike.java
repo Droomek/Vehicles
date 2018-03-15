@@ -8,7 +8,7 @@ public class Bike extends Vehicle {
     }
 
     @Override
-    public void start(){
+    public void start() throws InterruptedException {
         System.out.println ( getName () + " " + getModelName () + " has started." );
         super.vehicleSpeed (bikeSpeedTab);
     }
