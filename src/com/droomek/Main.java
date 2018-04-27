@@ -21,7 +21,7 @@ public class Main {
         //plane1.start ();
         //plane1.stop ();
         //vehicle2.start ();
-        //vehicle2.stop ();
+        vehicle2.stop ();
         plane2.start ();
         plane2.stop ();
 
